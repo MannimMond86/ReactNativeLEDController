@@ -9,11 +9,11 @@
 import React from 'react';
 
 import { Provider } from 'react-redux';
-import { createStore,applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers/index';
 import thunk from 'redux-thunk';
 
-import {BleManager} from 'react-native-ble-plx';
+import { BleManager } from 'react-native-ble-plx';
 
 import BLEList from './BLElist';
 import LEDColorPicker from './ColorPicker';
@@ -33,12 +33,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: BLEList},
-  ColorPicker: {screen:LEDColorPicker}
+  Home: { screen: BLEList },
+  ColorPicker: { screen: LEDColorPicker }
 });
 
 const DeviceManager = new BleManager();
@@ -52,7 +52,7 @@ const App: () => React$Node = () => {
 
   return (
     <>
-      <Provider store={ store }>
+      <Provider store={store}>
         <Navigation />
       </Provider>
     </>

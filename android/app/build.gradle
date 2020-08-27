@@ -149,6 +149,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('OHIOH.keystore')
+            storePassword 'abcdefg'
+            keyAlias 'OHIOH'
+            keyPassword 'abcdefg'
+        }
     }
     buildTypes {
         debug {
